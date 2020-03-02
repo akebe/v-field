@@ -1,5 +1,5 @@
 # v-input  
-A Vue.js directive for dynamic input  
+🖍A Vue.js directive for dynamic input  
 
 ``` 
 <el-table
@@ -25,10 +25,14 @@ npm i --save v-field
 import Vue from 'vue';
 import VField from 'v-field';
 
-Vue.use(VField, directiveName); // default directiveName = 'v-field'
+Vue.use(VField, directiveName); // default directiveName = 'field'
 
 ```
-### options
+### Playground on the Web
+[https://codesandbox.io/s/v-field-hh8g2](https://codesandbox.io/s/v-field-hh8g2)  (interactive playground with webpack and ESM)
+
+
+### Options
 
 ```
 <span
