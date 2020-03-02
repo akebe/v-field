@@ -1,6 +1,7 @@
-#v-input
-A Vue.js directive for dynamic input
-```
+# v-input  
+A Vue.js directive for dynamic input  
+
+``` 
 <el-table
   :data="tableData"
   style="width: 100%">
@@ -15,8 +16,10 @@ A Vue.js directive for dynamic input
 </el-table>
 ```
 
-###Installation
-`npm i --save v-field`
+### Installation  
+```
+npm i --save v-field
+```
 
 ```
 import Vue from 'vue';
@@ -25,7 +28,7 @@ import VField from 'v-field';
 Vue.use(VField, directiveName); // default directiveName = 'v-field'
 
 ```
-###options
+### options
 
 ```
 <span
