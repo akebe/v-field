@@ -1,0 +1,23 @@
+{
+  "name": "v-field",
+  "version": "0.0.2",
+  "description": "a vue custom-directive",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "vue-input",
+    "vue-table-input",
+    "vue-td-input",
+    "v-field"
+  ],
+  "homepage": "https://github.com/akebe/v-field",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:akebe/v-field.git"
+  },
+  "author": "akebe <asseek@163.com>",
+  "license": "MIT"
+}
