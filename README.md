@@ -42,6 +42,8 @@ Vue.use(VField, directiveName); // default directiveName = 'field'
     value: () => row.date, 
     input: val => row.date = val,
     disabled: () => false, 
+    inputClass: 'v-field',
+    inputType: 'text',
   }"
 >
   {{ row.date }}
