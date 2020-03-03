@@ -1,4 +1,4 @@
-# v-input  
+# v-field  
 🖍A Vue.js directive for dynamic input  
 
 ``` 
@@ -37,7 +37,7 @@ Vue.use(VField, directiveName); // default directiveName = 'field'
 ```
 <span
   v-field="{
-    type: 'click',   // dblclick
+    event: 'click',  // dblclick
     nodeName: 'TD',  // TH
     value: () => row.date, 
     input: val => row.date = val,
@@ -46,5 +46,12 @@ Vue.use(VField, directiveName); // default directiveName = 'field'
 >
   {{ row.date }}
 <span>
+```
+you can set defaultOptions
+```
+import VField from 'v-field';
+
+VField.defaultOptions.event = 'dblclick';
+VField.defaultOptions.nodeName = 'TH';
 ```
 
