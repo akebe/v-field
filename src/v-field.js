@@ -17,7 +17,7 @@ function createInput(options) {
   const input = document.createElement('input');
   input.className = options.inputClass || defaultOptions.inputClass;
   input.type = options.inputType || defaultOptions.inputType;
-  input.value = isFunc(options.value) ? options.value() : options.value;
+  input.value = isFunc(options.value) ? options.value(input, options) : options.value;
   return input;
 }
 
@@ -33,13 +33,13 @@ function handle(el, binding) {
         el: targetEl,
         event: options.event || defaultOptions.event,
         listener() {
-          const disabled = isFunc(options.disabled) ? options.disabled() : options.disabled;
+          const disabled = isFunc(options.disabled) ? options.disabled(options) : options.disabled;
           if (!disabled && !inputEl) {
             inputEl = createInput(handle.options);
             targetEl.appendChild(inputEl);
             inputEl.focus();
             inputEl.onblur = () => {
-              handle.options.input && handle.options.input(inputEl.value);
+              handle.options.input && handle.options.input(inputEl.value, handle.options);
               targetEl.removeChild(inputEl);
               inputEl = undefined;
             };
