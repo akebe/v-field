@@ -39,8 +39,8 @@ function handle(el, binding) {
             targetEl.appendChild(inputEl);
             inputEl.focus();
             inputEl.onblur = () => {
-              handle.options.input && handle.options.input(inputEl.value, handle.options);
               targetEl.removeChild(inputEl);
+              isFunc(handle.options.input) && handle.options.input(inputEl.value, handle.options);
               inputEl = undefined;
             };
           }
