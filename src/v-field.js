@@ -46,7 +46,7 @@ function handle(el, binding) {
           }
         },
       };
-      targetEl.addEventListener(handle.event, handle.listener);
+      targetEl.addEventListener(handle.event, handle.listener, false);
       el[HANDLE_PROPERTY] = handle;
     } else {
       handle.options = options;
